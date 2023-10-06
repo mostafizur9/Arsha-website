@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* root */
+:root {
+    --sky: #47b2e4;
+    --sky-focus: #0da7ee;
+    --blue: #37517e;
+    --white: #fff;
+    --black-gray: #444444;
+    --gray: #dee2e6;
+    --white-gray: #f3f5fa;
+    --why-us: #848484;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--sky-focus);
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.min-h-70 {
+    min-height: 70vh;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.col {
+    width: 100%;
+}
+
+.section-title {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 16px;
+    color: var(--black-gray);
+}
+
+/* header */
+header {
+    background-color: var(--blue);
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.navbar {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.navbar ul li a {
+    font-family: sans-serif;
+}
+
+.get-btn-outline {
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid var(--sky);
+    color: var(--white);
+    cursor: pointer;
+
+}
+
+.get-btn {
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: var(--sky);
+    border: 2px solid var(--sky);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.get-btn:hover,
+.get-btn-outline:hover {
+    background-color: var(--sky-focus);
+    color: var(--white);
+}
+
+/* hero */
+#home {
+    background-color: var(--blue);
+}
+
+.content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--white);
+    font-family: sans-serif;
+}
+
+.content p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--gray);
+    font-family: sans-serif;
+}
+
+.grp-btn {
+    margin: 30px 0;
+    display: flex;
+    gap: 12px;
+}
+
+.watch-btn {
+    color: var(--white);
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* .watch-btn svg:hover{
+    background-color: var(--sky-focus);
+    cursor: pointer;
+} */
+
+
+#home {
+    min-height: 40vh;
+    padding: 30px 0;
+}
+
+#home .hero-img {
+    text-align: center;
+}
+
+#home .hero-img img {
+    width: 100%;
+}
+
+/* client section */
+
+.client {
+    width: 100%;
+    background-color: var(--white-gray);
+}
+
+.client .container .row {
+    display: flex;
+}
+
+.client .container .row img {
+    width: 40%;
+}
+
+.client img {
+    max-width: 45%;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    padding: 15px 0;
+    filter: grayscale(100);
+}
+
+.client img:hover {
+    filter: none;
+    transform: scale(1.1);
+}
+
+/* end client section */
+
+/* about section */
+
+
+#about .container {
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#about,
+#services,
+#portfolio,
+#team,
+#price,
+#question,
+#contact {
+    width: 100%;
+    top: 150px;
+    padding: 60px 0;
+}
+
+#about h1,
+#services h1,
+#portfolio h1,
+#team .team,
+#price .price,
+#question h1,
+#contact h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    color: var(--blue);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+#about .container {
+    display: flex;
+    padding-top: 30px;
+}
+
+#about h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+}
+
+#about h1::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: 0;
+    left: calc(50% - 20px)
+}
+
+#about .box1 {
+    margin-bottom: 10px;
+}
+
+#about .box1 p {
+    padding-bottom: 10px;
+    color: var(--black-gray);
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+#about .box1 p i {
+    color: var(--sky);
+    padding-right: 5px;
+}
+
+#about .box2 {
+    flex-grow: 1;
+    flex-basis: 50%;
+    /* padding: 10px; */
+    font-size: 18px;
+    color: var(--black-gray);
+}
+
+#about .box2 p {
+    padding-bottom: 40px;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+#about .box2 a {
+    width: 200px;
+    padding: 10px 20px;
+    color: var(--sky);
+    border: 2px solid var(--sky-focus);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#about .box2 a:hover {
+    background-color: var(--sky-focus);
+    color: #fff;
+}
+
+/* end about section */
+
+/* calltoaction section */
+
+#call {
+    width: 100%;
+    min-height: 50vh;
+    background-image: linear-gradient(rgba(24, 55, 112, 0.9), rgba(24, 55, 112, 0.9)), url("../img/cta-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#call .cta-title {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--white);
+    /* padding-left:30px; */
+}
+
+#call .call-box {
+    display: flex;
+}
+
+#call .call-box p {
+    font-size: 17px;
+    color: var(--white-gray);
+    flex-basis: 80%;
+    margin: 10px 0;
+}
+
+#call .call-box a {
+    text-align: center;
+    padding: 15px 25px;
+    height: 50px;
+    width: 220px;
+    border: 2px solid var(--white);
+    border-radius: 40px;
+    font-size: 18px;
+    color: var(--white);
+    /* text-transform: uppercase; */
+    word-spacing: 2px;
+    transition: 0.5s;
+}
+
+#call .call-box a:hover {
+    background-color: var(--sky);
+    border: 2px solid var(--sky);
+}
+
+/* end calltoaction action */
